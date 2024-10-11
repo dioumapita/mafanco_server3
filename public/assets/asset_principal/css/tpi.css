@@ -1,0 +1,147 @@
+#ligne
+{
+    /* border: 2px solid black ; */
+    margin-top: 40px;
+    border-width:5px;
+    border-color:black;
+}
+
+#republiques
+{
+    font-size: x-large;
+    font-weight: bolder;
+}
+
+#title_casier
+{
+    font-size: x-large;
+    font-weight: bolder;
+    text-align: center;
+    /* border: 5px solid; */
+    border: 5px solid;
+	border-radius: 20px;
+    margin-left: 300px;
+}
+
+#bordure_table_c
+{
+    line-height: normal !important;
+    border: 2px solid black !important;
+    font-size:small !important;
+}
+
+#table_casier
+{
+    /* margin-left: 300px; */
+    margin-top: 10px;
+}
+
+#introduction
+{
+    font-size:x-large;
+    font-weight: bolder;
+
+}
+
+#a_droite
+{
+    margin-left: 850px;
+}
+
+#m_bottom
+{
+    margin-bottom: 0px;
+}
+
+.contoure{
+	border: 5px solid;
+	border-radius: 20px;
+	padding: 0px;
+	margin-right: 120px;
+    margin-left: 120px;
+}
+
+#neant
+{
+    font-size: larger;
+    text-align: center;
+    font-weight: bolder;
+}
+
+#observation
+{
+    line-height: normal;
+    text-align: center;
+}
+
+#style_js
+{
+    font-size:17px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    word-spacing: -0.1em;
+}
+
+#on_signer
+{
+    font-size:large;
+}
+
+#temoins
+{
+    margin-top: -40px;
+    margin-left: 36px;
+    font-size:17px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: normal;
+    word-spacing: -0.1em;
+}
+#temoins2
+{
+    margin-top: -25px;
+    margin-left: 36px;
+    font-size:17px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: normal;
+    word-spacing: -0.1em;
+}
+
+#tribunal
+{
+    font-weight: bold;
+    font-size: 20px;
+    font-style: bold;
+    margin-top: -20px;
+    text-align: center;
+    text-decoration:underline;
+}
+
+#motif
+{
+    font-weight: bold;
+    font-size: 20px;
+    font-style: bold;
+    margin-top: -21px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+#style_js_2
+{
+    font-size:18px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    word-spacing: -0.1em;
+    margin-top: -16px;
+}
+#style_js_1
+{
+    font-size:18px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    word-spacing: -0.1em;
+    margin-top: -19;
+}
+
+
+
