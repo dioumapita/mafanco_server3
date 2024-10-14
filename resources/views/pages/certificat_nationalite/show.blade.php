@@ -328,33 +328,33 @@
                                                                         @if($certificat->type == 'Interim')
                                                                             &emsp;PAR INTERIM <br>
                                                                         @endif
-                                                                    @elseif($certificat->fonction == 'JUGE' and $certificat->sexe == 'M')
+                                                                    @elseif($certificat->fonction == 'JUGE' and $info_signateur->sexe == 'M')
                                                                         &emsp;CABINET DU<br>
                                                                         &emsp;JUGE-PRESIDENT <br>
                                                                         @if($certificat->type == 'Interim')
                                                                             &emsp;PAR INTERIM <br>
                                                                         @endif
-                                                                    @elseif($certificat->fonction == 'JUGE' and $certificat->sexe == 'F')
+                                                                    @elseif($certificat->fonction == 'JUGE' and $info_signateur->sexe == 'F')
                                                                         &emsp;CABINET DE LA<br>
                                                                         &emsp;JUGE-PRESIDENTE <br>
                                                                         @if($certificat->type == 'Interim')
                                                                             &emsp;PAR INTERIM <br>
                                                                         @endif
-                                                                    @elseif($certificat->fonction == 'President de section' and $certificat->sexe == 'M')
+                                                                    @elseif($certificat->fonction == 'President de section' and $info_signateur->sexe == 'M')
                                                                         CABINET DE M.LE <br>
                                                                         PRESIDENT DE <br>
                                                                         SECTION <br>
                                                                         @if($certificat->type == 'Interim')
                                                                             &emsp;PAR INTERIM <br>
                                                                         @endif
-                                                                    @elseif($certificat->fonction == 'Presidente de section' and $certificat->sexe == 'F')
+                                                                    @elseif($certificat->fonction == 'Presidente de section' and $info_signateur->sexe == 'F')
                                                                         CABINET DE Mme .LA <br>
                                                                         PRESIDENTE DE <br>
                                                                         SECTION <br>
                                                                         @if($certificat->type == 'Interim')
                                                                             &emsp;PAR INTERIM <br>
                                                                         @endif
-                                                                    @elseif($certificat->fonction == 'President de section civile' and $certificat->sexe == 'M')
+                                                                    @elseif($certificat->fonction == 'President de section civile' and $info_signateur->sexe == 'M')
                                                                         CABINET DE M.LE <br>
                                                                         PRESIDENT DE LA <br>
                                                                         PREMIERE SECTION <br>
@@ -363,7 +363,7 @@
                                                                         @if($certificat->type == 'Interim')
                                                                             &emsp;PAR INTERIM <br>
                                                                         @endif
-                                                                    @elseif($certificat->fonction == 'Presidente de section civile' and $certificat->sexe == 'F')
+                                                                    @elseif($certificat->fonction == 'Presidente de section civile' and $info_signateur->sexe == 'F')
                                                                         CABINET DE Mme.LA <br>
                                                                         PRESIDENTE DE LA <br>
                                                                         PREMIERE SECTION <br>
@@ -380,7 +380,7 @@
                                                                         @if($certificat->type == 'Interim')
                                                                             &emsp;PAR INTERIM <br>
                                                                         @endif
-                                                                    @elseif($certificat->fonction == 'Presidente de section correctionnelle' and $certificat->sexe == 'F')
+                                                                    @elseif($certificat->fonction == 'Presidente de section correctionnelle' and $info_signateur->sexe == 'F')
                                                                         CABINET DE Mme.LA <br>
                                                                         PRESIDENTE DE LA <br>
                                                                         PREMIERE SECTION <br>
@@ -413,16 +413,16 @@
                                                                 Le Président @if($certificat->type == 'Interim') par intérim @endif du Tribunal de Première Instance de Dixinn,Conakry;
                                                             @elseif($certificat->fonction == 'Presidente')
                                                                 La Présidente @if($certificat->type == 'Interim') par intérim @endif du Tribunal de Première Instance de Dixinn,Conakry;
-                                                            @elseif($certificat->fonction == 'JUGE' and $certificat->sexe == 'M')
+                                                            @elseif($certificat->fonction == 'JUGE' and $info_signateur->sexe == 'M')
                                                                 Le Juge Président @if($certificat->type == 'Interim') par intérim @endif de la Section Civile et Administrative au
                                                                 Tribunal de Première Instance de Dixinn,Conakry;
-                                                            @elseif($certificat->fonction == 'JUGE' and $certificat->sexe == 'F')
+                                                            @elseif($certificat->fonction == 'JUGE' and $info_signateur->sexe == 'F')
                                                                 La Juge Présidente @if($certificat->type == 'Interim') par intérim @endif de la Section Civile et Administrative au
                                                                 Tribunal de Première Instance de Dixinn,Conakry;
-                                                            @elseif($certificat->fonction == 'President de section' and $certificat->sexe == 'M')
+                                                            @elseif($certificat->fonction == 'President de section' and $info_signateur->sexe == 'M')
                                                                 Le Président de Section @if($certificat->type == 'Interim') par intérim @endif au
                                                                 Tribunal de Première Instance de Dixinn,Conakry;
-                                                            @elseif($certificat->fonction == 'Presidente de section' and $certificat->sexe == 'F')
+                                                            @elseif($certificat->fonction == 'Presidente de section' and $info_signateur->sexe == 'F')
                                                                 La Présidente de Section @if($certificat->type == 'Interim') par intérim @endif au
                                                                 Tribunal de Première Instance de Dixinn,Conakry;
                                                             @else
@@ -467,9 +467,9 @@
                                                                 LE PRESIDENT @if($certificat->type == 'Interim') PAR INTERIM @endif
                                                             @elseif($certificat->fonction == 'Presidente')
                                                                 LA PRESIDENTE  @if($certificat->type == 'Interim') PAR INTERIM @endif
-                                                            @elseif($certificat->fonction == 'JUGE' and $certificat->sexe == 'M')
+                                                            @elseif($certificat->fonction == 'JUGE' and $info_signateur->sexe == 'M')
                                                                 LE JUGE PRESIDENT @if($certificat->type == 'Interim') PAR INTERIM @endif
-                                                            @elseif($certificat->fonction == 'JUGE' and $certificat->sexe == 'F')
+                                                            @elseif($certificat->fonction == 'JUGE' and $info_signateur->sexe == 'F')
                                                                 LA JUGE PRESIDENTE @if($certificat->type == 'Interim') PAR INTERIM @endif
                                                             @elseif($certificat->fonction == 'President de section' and $certificat->status == 'Officiel')
                                                                 LE PRESIDENT @if($certificat->type == 'Interim') PAR INTERIM @endif
@@ -479,7 +479,7 @@
 
                                                             @endif
                                                             <br><br><br><br><br>
-                                                            @if($certificat->sexe == 'F')
+                                                            @if($info_signateur->sexe == 'F')
                                                             &emsp; &emsp; Mme. {{ $certificat->signateur }}
                                                             @else
                                                             &emsp; &emsp; M. {{ $certificat->signateur }}
