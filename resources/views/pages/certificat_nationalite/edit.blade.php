@@ -57,44 +57,6 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        {{-- <div class="form-group row">
-                                            <label class="control-label col-md-3">Copie
-                                                <span class="required"> * </span>
-                                            </label>
-                                            <div class="col-md-5">
-                                                <div class="input-group">
-                                                    <select class="form-control input-height" name="copie" required>
-                                                        <option value="">Selectionner...</option>
-                                                        <option @if($certificat->copie == 'de l\'acte de naissance') selected   @endif value="de l'acte de naissance">L'acte de Naissance</option>
-                                                        <option @if($certificat->copie == 'de la pièce d\'identité') selected @endif value="de la pièce d'identité">Pièce d'identité</option>
-                                                        <option @if($certificat->copie == 'du passeport') selected @endif value="du passeport">Passport</option>
-                                                        <option @if($certificat->copie == 'jugement suppletif') selected @endif value="jugement suppletif">jugement suppletif</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label class="control-label col-md-3">Numéro de la copie
-                                                <span class="required"> * </span>
-                                            </label>
-                                            <div class="col-md-5">
-                                                <div class="input-group">
-                                                    <input type="text" name="num_copie"  placeholder="Veuillez saisir le numéro de la copie"
-                                                        class="form-control input-height" value="{{ $certificat->num_copie }}" required />
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label class="control-label col-md-3">Date de la copie
-                                                <span class="required"> * </span>
-                                            </label>
-                                            <div class="col-md-5">
-                                                <div class="input-group">
-                                                    <input type="date" name="date_copie"  placeholder="Veuillez saisir la date de la copie"
-                                                        class="form-control input-height" value="{{ $certificat->date_copie->format('Y-m-d') }}" required />
-                                                </div>
-                                            </div>
-                                        </div> --}}
                                     <!-- End nom de l'élève -->
                                 </div>
                             </fieldset>
@@ -194,6 +156,43 @@
                                                     @foreach ($all_signateurs as $signateur)
                                                         <option @if($certificat->signateur == $signateur->nom_signateur) selected @endif value="{{ $signateur->nom_signateur }}">{{ $signateur->nom_signateur }}</option>
                                                     @endforeach
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="control-label col-md-3"> Fonction
+                                            <span class="required"> * </span>
+                                        </label>
+                                        <div class="col-md-5">
+                                            <div class="input-group">
+                                                <select class="form-control input-height" name="fonction" required>
+                                                    <option value="">Selectionner...</option>
+                                                    <option value="Chef du Greffe" @if($certificat->fonction == 'Chef du Greffe') selected @endif>Chef du Greffe</option>
+                                                    <option value="Greffier" @if($certificat->fonction == 'Greffier') selected @endif>Greffier</option>
+                                                    <option value="President" @if($certificat->fonction == 'President') selected @endif>President</option>
+                                                    <option value="Presidente" @if($certificat->fonction == 'Presidente') selected @endif>Presidente</option>
+                                                    <option value="JUGE" @if($certificat->fonction == 'JUGE') selected @endif>JUGE</option>
+                                                    <option value="President de section" @if($certificat->fonction == 'President de section') selected @endif>Président de section</option>
+                                                    <option value="Presidente de section" @if($certificat->fonction == 'Presidente de section') selected @endif>Présidente de section</option>
+                                                    <option value="President de section civile" @if($certificat->fonction == 'President de section civile') selected @endif>Président de section civile</option>
+                                                    <option value="Presidente de section civile" @if($certificat->fonction == 'Presidente de section civile') selected @endif>Présidente de section civile</option>
+                                                    <option value="President de section correctionnelle" @if($certificat->fonction == 'President de section correctionnelle') selected @endif>Président de section correctionnelle</option>
+                                                    <option value="Presidente de section correctionnelle" @if($certificat->fonction == 'Presidente de section correctionnelle') selected @endif>Présidente de section correctionnelle</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="control-label col-md-3"> Status
+                                            <span class="required"> * </span>
+                                        </label>
+                                        <div class="col-md-5">
+                                            <div class="input-group">
+                                                <select class="form-control input-height" name="type" required>
+                                                    <option value="">Selectionner...</option>
+                                                    <option value="Officiel" @if($certificat->type == 'Officiel') selected @endif>Officiel</option>
+                                                    <option value="Interim" @if($certificat->type == 'Interim') selected @endif>Interim</option>
                                                 </select>
                                             </div>
                                         </div>

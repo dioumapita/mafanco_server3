@@ -133,7 +133,9 @@ class CertificatNationaliteController extends Controller
                                                                 'article' => $request->article,
                                                                 'signateur' => $request->signateur,
                                                                 'users_id' => Auth::user()->id,
-                                                                'annee_id' => $annee_id
+                                                                'annee_id' => $annee_id,
+                                                                'fonction' => $request->fonction,
+                                                                'type' => $request->type
                                                             ]);
 
             QrCode::format('png')->generate(
@@ -230,7 +232,6 @@ class CertificatNationaliteController extends Controller
             '../public/qrcodes/'.$id.'.png');
 
         $update = CertificatNationalite::where('id',$id)->update([
-                    // 'num' => $request->num,
                     'date_demande' => $request->date_demande,
                     'prenom_nom' => $request->prenom_nom,
                     'date_naiss' => $request->date_naiss,
@@ -239,7 +240,9 @@ class CertificatNationaliteController extends Controller
                     'mere' => $request->mere,
                     'domicile' => $request->domicile,
                     'article' => $request->article,
-                    'signateur' => $request->signateur
+                    'signateur' => $request->signateur,
+                    'fonction' => $request->fonction,
+                    'type' => $request->type
 
         ]);
 
@@ -297,7 +300,7 @@ class CertificatNationaliteController extends Controller
             ->whereYear('created_at',$annee)
             ->first()
             ->nbre;
-            
+
             $annee = DB::table('annees')->latest('annee')->first()->annee;
             $all_certificats =  CertificatNationalite::whereMonth('created_at',$num_mois)
                                                         ->where('users_id',Auth::user()->id)

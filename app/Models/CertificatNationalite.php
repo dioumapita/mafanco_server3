@@ -11,7 +11,7 @@ class CertificatNationalite extends Model
 
     protected $table = 'certificat_nationalites';
 
-    protected $fillable = ['num','date_demande','copie','num_copie','date_copie','prenom_nom','date_naiss','lieu','pere','mere','domicile','article','signateur','users_id','annee_id'];
+    protected $fillable = ['num','date_demande','copie','num_copie','date_copie','prenom_nom','date_naiss','lieu','pere','mere','domicile','article','signateur','fonction','type','users_id','annee_id'];
 
     protected $dates = ['date_demande','date_copie','date_naiss'];
 
