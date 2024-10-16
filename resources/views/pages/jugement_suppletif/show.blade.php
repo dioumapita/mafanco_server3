@@ -531,13 +531,13 @@
                                                                                 @endif
                                                                                 et
                                                                                 @if($jugement->fonction_greffe == 'Chef du Greffe' and $info_greffier->sexe == 'M')
-                                                                                    le chef du Greffe @if($jugement->type_greffe == 'Interim') par intérim @endif {{ $jugement->greffier }}
+                                                                                    le chef du Greffe @if($jugement->type_greffe == 'Interim') par intérim @endif
                                                                                 @elseif($jugement->fonction_greffe == 'Chef du Greffe' and $info_greffier->sexe == 'F')
-                                                                                    la cheffe du Greffe @if($jugement->type_greffe == 'Interim') par intérim @endif {{ $jugement->greffier }}
+                                                                                    la cheffe du Greffe @if($jugement->type_greffe == 'Interim') par intérim @endif
                                                                                 @elseif($jugement->fonction_greffe == 'Greffier' and $info_greffier->sexe == 'M')
-                                                                                    le Greffier @if($jugement->type_greffe == 'Interim') par intérim @endif {{ $jugement->greffier }}
+                                                                                    le Greffier @if($jugement->type_greffe == 'Interim') par intérim @endif
                                                                                 @elseif($jugement->fonction_greffe == 'Greffier' and $info_greffier->sexe == 'F')
-                                                                                    la Greffière @if($jugement->type_greffe == 'Interim') par intérim @endif {{ $jugement->greffier }}
+                                                                                    la Greffière @if($jugement->type_greffe == 'Interim') par intérim @endif
                                                                                 @else
 
                                                                                 @endif
