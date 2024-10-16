@@ -449,8 +449,8 @@
                                                                     @if($jugement->type == 'expedition')
                                                                         <p id="on_signer">
                                                                             <b>
-                                                                                Et ont signé
-                                                                                @if($jugement->fonction_president == 'President')
+                                                                                {{-- Et ont signé --}}
+                                                                                {{-- @if($jugement->fonction_president == 'President')
                                                                                     <b> le Président @if($jugement->type_president == 'Interim') par intérim @endif  </b>
                                                                                 @elseif($jugement->fonction_president == 'Presidente')
                                                                                     <b> la Présidente @if($jugement->type_president == 'Interim') par intérim @endif </b>
@@ -484,7 +484,7 @@
                                                                                     la Greffière @if($jugement->type_greffe == 'Interim') par intérim @endif
                                                                                 @else
 
-                                                                                @endif
+                                                                                @endif --}}
                                                                                 <br> Suivent les signatures <br> Pour copie certifiée conforme. <br>
                                                                                 Conakry, le {{ date('d/m/Y') }} <br>
                                                                                 Le chef du Greffe <br><br><br><br><br><br>
