@@ -487,15 +487,15 @@
                                                                                 @endif --}}
                                                                                 <br> Suivent les signatures <br> Pour copie certifiée conforme. <br>
                                                                                 Conakry, le {{ date('d/m/Y') }} <br>
-                                                                                Le chef du Greffe <br><br><br><br><br><br>
+                                                                                Le chef du Greffe @if($jugement->type_greffe == 'Interim') par intérim @endif <br><br><br><br><br><br>
                                                                                 @if($jugement->fonction_greffe == 'Chef du Greffe' and $info_greffier->sexe == 'M')
-                                                                                    le chef du Greffe @if($jugement->type_greffe == 'Interim') par intérim @endif {{ $jugement->greffier }}
+                                                                                     {{ $jugement->greffier }}
                                                                                 @elseif($jugement->fonction_greffe == 'Chef du Greffe' and $info_greffier->sexe == 'F')
-                                                                                    la cheffe du Greffe @if($jugement->type_greffe == 'Interim') par intérim @endif {{ $jugement->greffier }}
+                                                                                     {{ $jugement->greffier }}
                                                                                 @elseif($jugement->fonction_greffe == 'Greffier' and $info_greffier->sexe == 'M')
-                                                                                    le Greffier @if($jugement->type_greffe == 'Interim') par intérim @endif {{ $jugement->greffier }}
+                                                                                     {{ $jugement->greffier }}
                                                                                 @elseif($jugement->fonction_greffe == 'Greffier' and $info_greffier->sexe == 'F')
-                                                                                    la Greffière @if($jugement->type_greffe == 'Interim') par intérim @endif {{ $jugement->greffier }}
+                                                                                     {{ $jugement->greffier }}
                                                                                 @else
 
                                                                                 @endif
