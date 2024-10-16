@@ -473,20 +473,19 @@
                                                             @endif
                                                         </div>
                                                         <div id="signatures" class="pull-right">
-                                                            Fait à Conakry, le {{ $certificat->created_at->format('d/m/Y') }}<br><br>
-                                                            &emsp; &emsp;
+                                                            Fait à Conakry, le {{ $certificat->created_at->format('d/m/Y') }}
                                                             @if($certificat->fonction == 'President')
-                                                                LE PRESIDENT @if($certificat->type == 'Interim') PAR INTERIM @endif
+                                                                <br><br> LE PRESIDENT @if($certificat->type == 'Interim') PAR INTERIM @endif
                                                             @elseif($certificat->fonction == 'Presidente')
-                                                                LA PRESIDENTE  @if($certificat->type == 'Interim') PAR INTERIM @endif
+                                                                <br><br> LA PRESIDENTE  @if($certificat->type == 'Interim') PAR INTERIM @endif
                                                             @elseif($certificat->fonction == 'JUGE' and $info_signateur->sexe == 'M')
-                                                                LE JUGE PRESIDENT @if($certificat->type == 'Interim') PAR INTERIM @endif
+                                                                <br><br> LE JUGE PRESIDENT @if($certificat->type == 'Interim') PAR INTERIM @endif
                                                             @elseif($certificat->fonction == 'JUGE' and $info_signateur->sexe == 'F')
                                                                 LA JUGE PRESIDENTE @if($certificat->type == 'Interim') PAR INTERIM @endif
                                                             @elseif($certificat->fonction == 'President de section' and $info_signateur->sexe == 'M')
-                                                                LE PRESIDENT DE SECTION @if($certificat->type == 'Interim') <br>&nbsp;&emsp;&emsp; PAR INTERIM @endif
+                                                                <br><br>LE PRESIDENT DE SECTION @if($certificat->type == 'Interim') <br>&nbsp;&emsp;&emsp; PAR INTERIM @endif
                                                             @elseif($certificat->fonction == 'Presidente de section' and $info_signateur->sexe == 'F')
-                                                                LA PRESIDENTE DE SECTION @if($certificat->type == 'Interim') <br>&nbsp;&emsp;&emsp; PAR INTERIM @endif
+                                                                <br><br>LA PRESIDENTE DE SECTION @if($certificat->type == 'Interim') <br>&nbsp;&emsp;&emsp; PAR INTERIM @endif
                                                             @elseif($certificat->fonction == 'President de section civile' and $info_signateur->sexe == 'M')
                                                                 LE PRESIDENT DE SECTION CIVILE @if($certificat->type == 'Interim') <br>&nbsp;&emsp;&emsp; PAR INTERIM @endif
                                                             @elseif($certificat->fonction == 'Presidente de section civile' and $info_signateur->sexe == 'F')
