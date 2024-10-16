@@ -519,8 +519,43 @@
                                                 <select class="form-control input-height" name="president" required>
                                                     <option value="">Selectionner...</option>
                                                         @foreach ($all_signateurs as $signateur)
-                                                            <option @if($jugement->president == $signateur->nom_signateur) selected @endif value="{{ $signateur->nom_signateur }}">{{ $signateur->nom_signateur.' '.$signateur->fonction }}</option>
+                                                            <option @if($jugement->president == $signateur->nom_signateur) selected @endif value="{{ $signateur->nom_signateur }}">{{ $signateur->nom_signateur }}</option>
                                                         @endforeach
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="control-label col-md-3"> Fonction
+                                            <span class="required"> * </span>
+                                        </label>
+                                        <div class="col-md-5">
+                                            <div class="input-group">
+                                                <select class="form-control input-height" name="fonction_president" required>
+                                                    <option value="">Selectionner...</option>
+                                                    <option value="President" @if($jugement->fonction_president == 'President') selected @endif>President</option>
+                                                    <option value="Presidente" @if($jugement->fonction_president == 'Presidente') selected @endif>Presidente</option>
+                                                    <option value="JUGE" @if($jugement->fonction_president == 'JUGE') selected @endif>JUGE</option>
+                                                    <option value="President de section" @if($jugement->fonction_president == 'President de section') selected @endif>Président de section</option>
+                                                    <option value="Presidente de section" @if($jugement->fonction_president == 'Presidente de section') selected @endif>Présidente de section</option>
+                                                    <option value="President de section civile" @if($jugement->fonction_president == 'President de section civile') selected @endif>Président de section civile</option>
+                                                    <option value="Presidente de section civile" @if($jugement->fonction_president == 'Presidente de section civile') selected @endif>Présidente de section civile</option>
+                                                    <option value="President de section correctionnelle" @if($jugement->fonction_president == 'President de section correctionnelle') selected @endif>Président de section correctionnelle</option>
+                                                    <option value="Presidente de section correctionnelle" @if($jugement->fonction_president == 'Presidente de section correctionnelle') selected @endif>Présidente de section correctionnelle</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="control-label col-md-3"> Status
+                                            <span class="required"> * </span>
+                                        </label>
+                                        <div class="col-md-5">
+                                            <div class="input-group">
+                                                <select class="form-control input-height" name="type_president" required>
+                                                    <option value="">Selectionner...</option>
+                                                    <option value="Officiel" @if($jugement->type_president == 'Officiel') selected @endif>Officiel</option>
+                                                    <option value="Interim" @if($jugement->type_president == 'Interim') selected @endif>Interim</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -534,8 +569,36 @@
                                                 <select class="form-control input-height" name="greffier" required>
                                                     <option value="">Selectionner...</option>
                                                         @foreach ($all_signateurs as $signateur)
-                                                            <option @if($jugement->greffier == $signateur->nom_signateur) selected @endif value="{{ $signateur->nom_signateur }}">{{ $signateur->nom_signateur.' '.$signateur->fonction }}</option>
+                                                            <option @if($jugement->greffier == $signateur->nom_signateur) selected @endif value="{{ $signateur->nom_signateur }}">{{ $signateur->nom_signateur }}</option>
                                                         @endforeach
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="control-label col-md-3"> Fonction
+                                            <span class="required"> * </span>
+                                        </label>
+                                        <div class="col-md-5">
+                                            <div class="input-group">
+                                                <select class="form-control input-height" name="fonction_greffe" required>
+                                                    <option value="">Selectionner...</option>
+                                                    <option value="Chef du Greffe"  @if($jugement->fonction_greffe == 'Chef du Greffe') selected @endif>Chef du Greffe</option>
+                                                    <option value="Greffier" @if($jugement->fonction_greffe == 'Greffier') selected @endif>Greffier</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="control-label col-md-3"> Status
+                                            <span class="required"> * </span>
+                                        </label>
+                                        <div class="col-md-5">
+                                            <div class="input-group">
+                                                <select class="form-control input-height" name="type_greffe" required>
+                                                    <option value="">Selectionner...</option>
+                                                    <option value="Officiel" @if($jugement->type_greffe == 'Officiel') selected @endif>Officiel</option>
+                                                    <option value="Interim" @if($jugement->type_greffe == 'Interim') selected @endif>Interim</option>
                                                 </select>
                                             </div>
                                         </div>

@@ -215,32 +215,40 @@
                                                              {{ $convertisseur->format($jugement->date_audience->isoFormat('DD')) }}
                                                             @endif
                                                               {{ $jugement->date_audience->isoFormat('MMMM') }} {{ $convertisseur->format($jugement->date_audience->format('Y')) }}, à laquelle siégeait
-                                                            @if($info_president->fonction == 'President')
-                                                                <b>{{ $jugement->president }} Président du Tribunal de Première Instance de Dixinn,Conakry, </b>
-                                                            @elseif($info_president->fonction == 'Presidente')
-                                                                <b>{{ $jugement->president }} Présidente du Tribunal de Première Instance de Dixinn,Conakry, </b>
-                                                            @elseif($info_president->fonction == 'JUGE' and $info_president->sexe == 'M')
-                                                                <b>{{ $jugement->president }} Juge Président de la Section Civile et Administrative au Tribunal de Première Instance de Dixinn,Conakry, </b>
-                                                            @elseif($info_president->fonction == 'JUGE' and $info_president->sexe == 'F')
-                                                                <b>{{ $jugement->president }} Juge Présidente de la Section Civile et Administrative au Tribunal de Première Instance de Dixinn,Conakry, </b>
-                                                            @elseif($info_president->fonction == 'President de section' and $info_president->sexe == 'M')
-                                                                <b>{{ $jugement->president }} Le Président de Section au Tribunal de Première Instance de Dixinn,Conakry, </b>
-                                                            @elseif($info_president->fonction == 'President de section' and $info_president->sexe == 'F')
-                                                                <b>{{ $jugement->president }} La Présidente de Section au Tribunal de Première Instance de Dixinn,Conakry, </b>
+                                                            @if($jugement->fonction_president == 'President')
+                                                                <b>{{ $jugement->president }} Président @if($jugement->type_president == 'Interim') par intérim @endif du Tribunal de Première Instance de Dixinn,Conakry, </b>
+                                                            @elseif($jugement->fonction_president == 'Presidente')
+                                                                <b>{{ $jugement->president }} Présidente @if($jugement->type_president == 'Interim') par intérim @endif du Tribunal de Première Instance de Dixinn,Conakry, </b>
+                                                            @elseif($jugement->fonction_president == 'JUGE' and $info_president->sexe == 'M')
+                                                                <b>{{ $jugement->president }} Juge Président  @if($jugement->type_president == 'Interim') par intérim @endif de la Section Civile et Administrative au Tribunal de Première Instance de Dixinn,Conakry, </b>
+                                                            @elseif($jugement->fonction_president == 'JUGE' and $info_president->sexe == 'F')
+                                                                <b>{{ $jugement->president }} Juge Présidente  @if($jugement->type_president == 'Interim') par intérim @endif de la Section Civile et Administrative au Tribunal de Première Instance de Dixinn,Conakry, </b>
+                                                            @elseif($jugement->fonction_president == 'President de section' and $info_president->sexe == 'M')
+                                                                <b>{{ $jugement->president }}  Président de Section @if($jugement->type_president == 'Interim') par intérim @endif au Tribunal de Première Instance de Dixinn,Conakry, </b>
+                                                            @elseif($jugement->fonction_president == 'President de section' and $info_president->sexe == 'F')
+                                                                <b>{{ $jugement->president }}  Présidente de Section @if($jugement->type_president == 'Interim') par intérim @endif au Tribunal de Première Instance de Dixinn,Conakry, </b>
+                                                            @elseif($jugement->fonction_president == 'President de section civile' and $info_president->sexe == 'M')
+                                                                <b>{{ $jugement->president }}  President de section civile @if($jugement->type_president == 'Interim') par intérim @endif au Tribunal de Première Instance de Dixinn,Conakry, </b>
+                                                            @elseif($jugement->fonction_president == 'Presidente de section civile' and $info_president->sexe == 'F')
+                                                                <b>{{ $jugement->president }} Presidente de section civile @if($jugement->type_president == 'Interim') par intérim @endif au Tribunal de Première Instance de Dixinn,Conakry, </b>
+                                                            @elseif($jugement->fonction_president == 'President de section correctionnelle' and $info_president->sexe == 'M')
+                                                                <b>{{ $jugement->president }} President de section correctionnelle @if($jugement->type_president == 'Interim') par intérim @endif au Tribunal de Première Instance de Dixinn,Conakry, </b>
+                                                            @elseif($jugement->fonction_president == 'Presidente de section correctionnelle' and $info_president->sexe == 'F')
+                                                                <b>{{ $jugement->president }} Presidente de section correctionnelle @if($jugement->type_president == 'Interim') par intérim @endif au Tribunal de Première Instance de Dixinn,Conakry, </b>
                                                             @else
 
                                                             @endif
                                                             avec l'assistance
-                                                            @if($info_greffier->fonction == 'Chef du Greffe' and $info_greffier->sexe == 'M')
-                                                                <b>de {{ $jugement->greffier }}, Chef du Greffe,</b>
-                                                            @elseif($info_greffier->fonction == 'Chef du Greffe' and $info_greffier->sexe == 'F')
-                                                                <b>de {{ $jugement->greffier }}, Cheffe du Greffe,</b>
-                                                            @elseif($info_greffier->fonction == 'Greffier' and $info_greffier->sexe == 'M')
-                                                                <b>de {{ $jugement->greffier }}, greffier,</b>
-                                                            @elseif($info_greffier->fonction == 'Greffier' and $info_greffier->sexe == 'F')
-                                                                <b>de {{ $jugement->greffier }}, greffière,</b>
+                                                            @if($jugement->fonction_greffe == 'Chef du Greffe' and $info_greffier->sexe == 'M')
+                                                                <b>de {{ $jugement->greffier }}, Chef du Greffe, @if($jugement->type_greffe == 'Interim') par intérim @endif</b>
+                                                            @elseif($jugement->fonction_greffe == 'Chef du Greffe' and $info_greffier->sexe == 'F')
+                                                                <b>de {{ $jugement->greffier }}, Cheffe du Greffe, @if($jugement->type_greffe == 'Interim') par intérim @endif</b>
+                                                            @elseif($jugement->fonction_greffe== 'Greffier' and $info_greffier->sexe == 'M')
+                                                                <b>de {{ $jugement->greffier }}, greffier, @if($jugement->type_greffe == 'Interim') par intérim @endif</b>
+                                                            @elseif($jugement->fonction_greffe == 'Greffier' and $info_greffier->sexe == 'F')
+                                                                <b>de {{ $jugement->greffier }}, greffière, @if($jugement->type_greffe == 'Interim') par intérim @endif</b>
                                                             @else
-                                                                <b>de {{ $jugement->greffier }}, greffier,</b>
+
                                                             @endif
                                                             en présence de <b>{{ $jugement->en_presence }}</b>, a rendu le jugement dont la teneur
                                                             suit:
@@ -252,7 +260,7 @@
                                                                     , {{ $jugement->profession_requerant }}
                                                                 @endif
                                                                 @if($jugement->quartier_requerant != null)
-                                                                    , 
+                                                                    ,
                                                                     @if($jugement->sexe_requerant =='Masculin')
                                                                         domicilié
                                                                     @else
@@ -304,7 +312,7 @@
                                                                         , {{ $jugement->profession_premier_temoin }}
                                                                     @endif
                                                                     @if($jugement->domicile_premier_temoin != null)
-                                                                        , 
+                                                                        ,
                                                                         @if($jugement->sexe_premier_temoin == 'Masculin')
                                                                             domicilié
                                                                         @else
@@ -442,32 +450,55 @@
                                                                         <p id="on_signer">
                                                                             <b>
                                                                                 Et ont signé
-                                                                                @if($info_president->fonction == 'president')
-                                                                                    le Président
-                                                                                @elseif($info_president->fonction == 'presidente')
-                                                                                    la Présidente
-                                                                                @elseif($info_president->fonction == 'JUGE' and $info_president->sexe == 'M')
-                                                                                    le Juge Président
-                                                                                @elseif($info_president->fonction == 'JUGE' and $info_president->sexe == 'F')
-                                                                                    la Juge Présidente
+                                                                                @if($jugement->fonction_president == 'President')
+                                                                                    <b> le Président @if($jugement->type_president == 'Interim') par intérim @endif  </b>
+                                                                                @elseif($jugement->fonction_president == 'Presidente')
+                                                                                    <b> la Présidente @if($jugement->type_president == 'Interim') par intérim @endif </b>
+                                                                                @elseif($jugement->fonction_president == 'JUGE' and $info_president->sexe == 'M')
+                                                                                    <b>le Juge Président  @if($jugement->type_president == 'Interim') par intérim @endif </b>
+                                                                                @elseif($jugement->fonction_president == 'JUGE' and $info_president->sexe == 'F')
+                                                                                    <b> la Juge Présidente  @if($jugement->type_president == 'Interim') par intérim @endif </b>
+                                                                                @elseif($jugement->fonction_president == 'President de section' and $info_president->sexe == 'M')
+                                                                                    <b> le Président de Section @if($jugement->type_president == 'Interim') par intérim @endif </b>
+                                                                                @elseif($jugement->fonction_president == 'President de section' and $info_president->sexe == 'F')
+                                                                                    <b> la Présidente de Section @if($jugement->type_president == 'Interim') par intérim @endif </b>
+                                                                                @elseif($jugement->fonction_president == 'President de section civile' and $info_president->sexe == 'M')
+                                                                                    <b> le President de section civile @if($jugement->type_president == 'Interim') par intérim @endif  </b>
+                                                                                @elseif($jugement->fonction_president == 'Presidente de section civile' and $info_president->sexe == 'F')
+                                                                                    <b>la Presidente de section civile @if($jugement->type_president == 'Interim') par intérim @endif </b>
+                                                                                @elseif($jugement->fonction_president == 'President de section correctionnelle' and $info_president->sexe == 'M')
+                                                                                    <b> le President de section correctionnelle @if($jugement->type_president == 'Interim') par intérim @endif  </b>
+                                                                                @elseif($jugement->fonction_president == 'Presidente de section correctionnelle' and $info_president->sexe == 'F')
+                                                                                    <b> la Presidente de section correctionnelle @if($jugement->type_president == 'Interim') par intérim @endif </b>
                                                                                 @else
 
                                                                                 @endif
                                                                                 et
-                                                                                @if($info_greffier->fonction == 'Chef du Greffe' and $info_greffier->sexe == 'M')
-                                                                                    le chef du Greffe
-                                                                                @elseif($info_greffier->fonction == 'Chef du Greffe' and $info_greffier->sexe == 'F')
-                                                                                    la cheffe du Greffe
-                                                                                @elseif($info_greffier->fonction == 'Greffier' and $info_greffier->sexe == 'M')
-                                                                                    le Greffier
-                                                                                @elseif($info_greffier->fonction == 'Greffier' and $info_greffier->sexe == 'F')
-                                                                                    la Greffière
+                                                                                @if($jugement->fonction_greffe == 'Chef du Greffe' and $info_greffier->sexe == 'M')
+                                                                                    le chef du Greffe @if($jugement->type_greffe == 'Interim') par intérim @endif
+                                                                                @elseif($jugement->fonction_greffe == 'Chef du Greffe' and $info_greffier->sexe == 'F')
+                                                                                    la cheffe du Greffe @if($jugement->type_greffe == 'Interim') par intérim @endif
+                                                                                @elseif($jugement->fonction_greffe == 'Greffier' and $info_greffier->sexe == 'M')
+                                                                                    le Greffier @if($jugement->type_greffe == 'Interim') par intérim @endif
+                                                                                @elseif($jugement->fonction_greffe == 'Greffier' and $info_greffier->sexe == 'F')
+                                                                                    la Greffière @if($jugement->type_greffe == 'Interim') par intérim @endif
                                                                                 @else
 
                                                                                 @endif
                                                                                 <br> Suivent les signatures <br> Pour copie certifiée conforme. <br>
                                                                                 Conakry, le {{ date('d/m/Y') }} <br>
-                                                                                Le chef du Greffe <br><br><br><br><br><br> Mohamed Fantagbè DIAKITE
+                                                                                Le chef du Greffe <br><br><br><br><br><br>
+                                                                                @if($jugement->fonction_greffe == 'Chef du Greffe' and $info_greffier->sexe == 'M')
+                                                                                    le chef du Greffe @if($jugement->type_greffe == 'Interim') par intérim @endif {{ $jugement->greffier }}
+                                                                                @elseif($jugement->fonction_greffe == 'Chef du Greffe' and $info_greffier->sexe == 'F')
+                                                                                    la cheffe du Greffe @if($jugement->type_greffe == 'Interim') par intérim @endif {{ $jugement->greffier }}
+                                                                                @elseif($jugement->fonction_greffe == 'Greffier' and $info_greffier->sexe == 'M')
+                                                                                    le Greffier @if($jugement->type_greffe == 'Interim') par intérim @endif {{ $jugement->greffier }}
+                                                                                @elseif($jugement->fonction_greffe == 'Greffier' and $info_greffier->sexe == 'F')
+                                                                                    la Greffière @if($jugement->type_greffe == 'Interim') par intérim @endif {{ $jugement->greffier }}
+                                                                                @else
+
+                                                                                @endif
 
                                                                             </>
                                                                         </p>
@@ -475,29 +506,42 @@
                                                                         <p id="on_signer">
                                                                             <b>
                                                                                 Et ont signé
-                                                                                @if($info_president->fonction == 'President')
-                                                                                    le Président
-                                                                                @elseif($info_president->fonction == 'Presidente')
-                                                                                    la Présidente
-                                                                                @elseif($info_president->fonction == 'JUGE' and $info_president->sexe == 'M')
-                                                                                    le Juge Président
-                                                                                @elseif($info_president->fonction == 'JUGE' and $info_president->sexe == 'F')
-                                                                                    la Juge Présidente
+                                                                                @if($jugement->fonction_president == 'President')
+                                                                                    <b> le Président @if($jugement->type_president == 'Interim') par intérim @endif  </b>
+                                                                                @elseif($jugement->fonction_president == 'Presidente')
+                                                                                    <b> la Présidente @if($jugement->type_president == 'Interim') par intérim @endif </b>
+                                                                                @elseif($jugement->fonction_president == 'JUGE' and $info_president->sexe == 'M')
+                                                                                    <b> le Juge Président  @if($jugement->type_president == 'Interim') par intérim @endif </b>
+                                                                                @elseif($jugement->fonction_president == 'JUGE' and $info_president->sexe == 'F')
+                                                                                    <b>la Juge Présidente  @if($jugement->type_president == 'Interim') par intérim @endif </b>
+                                                                                @elseif($jugement->fonction_president == 'President de section' and $info_president->sexe == 'M')
+                                                                                    <b>le Président de Section @if($jugement->type_president == 'Interim') par intérim @endif </b>
+                                                                                @elseif($jugement->fonction_president == 'President de section' and $info_president->sexe == 'F')
+                                                                                    <b>la Présidente de Section @if($jugement->type_president == 'Interim') par intérim @endif </b>
+                                                                                @elseif($jugement->fonction_president == 'President de section civile' and $info_president->sexe == 'M')
+                                                                                    <b>le President de section civile @if($jugement->type_president == 'Interim') par intérim @endif  </b>
+                                                                                @elseif($jugement->fonction_president == 'Presidente de section civile' and $info_president->sexe == 'F')
+                                                                                    <b> la Presidente de section civile @if($jugement->type_president == 'Interim') par intérim @endif </b>
+                                                                                @elseif($jugement->fonction_president == 'President de section correctionnelle' and $info_president->sexe == 'M')
+                                                                                    <b> le President de section correctionnelle @if($jugement->type_president == 'Interim') par intérim @endif  </b>
+                                                                                @elseif($jugement->fonction_president == 'Presidente de section correctionnelle' and $info_president->sexe == 'F')
+                                                                                    <b> la Presidente de section correctionnelle @if($jugement->type_president == 'Interim') par intérim @endif </b>
                                                                                 @else
 
                                                                                 @endif
                                                                                 et
-                                                                                @if($info_greffier->fonction == 'Chef du Greffe' and $info_greffier->sexe == 'M')
-                                                                                    le chef du Greffe
-                                                                                @elseif($info_greffier->fonction == 'Chef du Greffe' and $info_greffier->sexe == 'F')
-                                                                                    la cheffe du Greffe
-                                                                                @elseif($info_greffier->fonction == 'Greffier' and $info_greffier->sexe == 'M')
-                                                                                    le Greffier
-                                                                                @elseif($info_greffier->fonction == 'Greffier' and $info_greffier->sexe == 'F')
-                                                                                    la Greffière
+                                                                                @if($jugement->fonction_greffe == 'Chef du Greffe' and $info_greffier->sexe == 'M')
+                                                                                    le chef du Greffe @if($jugement->type_greffe == 'Interim') par intérim @endif {{ $jugement->greffier }}
+                                                                                @elseif($jugement->fonction_greffe == 'Chef du Greffe' and $info_greffier->sexe == 'F')
+                                                                                    la cheffe du Greffe @if($jugement->type_greffe == 'Interim') par intérim @endif {{ $jugement->greffier }}
+                                                                                @elseif($jugement->fonction_greffe == 'Greffier' and $info_greffier->sexe == 'M')
+                                                                                    le Greffier @if($jugement->type_greffe == 'Interim') par intérim @endif {{ $jugement->greffier }}
+                                                                                @elseif($jugement->fonction_greffe == 'Greffier' and $info_greffier->sexe == 'F')
+                                                                                    la Greffière @if($jugement->type_greffe == 'Interim') par intérim @endif {{ $jugement->greffier }}
                                                                                 @else
-                                                                                    le Greffier
+
                                                                                 @endif
+
                                                                             </b>
                                                                         </p>
                                                                     @endif

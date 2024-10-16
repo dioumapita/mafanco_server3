@@ -283,6 +283,11 @@ class CertificatNationaliteController extends Controller
 
         if($user->hasRole('Controle'))
         {
+            $limit = GestionStatistique::where('libelle','NATIONALITE')
+                    ->where('mois',$num_mois)
+                    ->whereYear('created_at',$annee)
+                    ->first()
+                    ->nbre;
 
             $all_certificats =     CertificatNationalite::whereMonth('created_at',$num_mois)->limit($limit)->get();
         }
@@ -295,12 +300,6 @@ class CertificatNationaliteController extends Controller
         }
         else
         {
-            $limit = GestionStatistique::where('libelle','NATIONALITE')
-            ->where('mois',$num_mois)
-            ->whereYear('created_at',$annee)
-            ->first()
-            ->nbre;
-
             $annee = DB::table('annees')->latest('annee')->first()->annee;
             $all_certificats =  CertificatNationalite::whereMonth('created_at',$num_mois)
                                                         ->where('users_id',Auth::user()->id)

@@ -247,7 +247,11 @@ class JugementSuppletifController extends Controller
                             'users_id' => Auth::user()->id,
                             'status' => $request->status,
                             'expire_at' =>  now()->addDays(3),
-                            'annee_id' => $annee_id
+                            'annee_id' => $annee_id,
+                            'fonction_president' => $request->fonction_president,
+                            'type_president' => $request->type_president,
+                            'fonction_greffe' => $request->fonction_greffe,
+                            'type_greffe' => $request->type_greffe
                         ]);
                     }
                     else
@@ -313,7 +317,11 @@ class JugementSuppletifController extends Controller
                             'users_id' => Auth::user()->id,
                             'status' => $request->status,
                             'expire_at' =>  now()->addDays(3),
-                            'annee_id' => $annee_id
+                            'annee_id' => $annee_id,
+                            'fonction_president' => $request->fonction_president,
+                            'type_president' => $request->type_president,
+                            'fonction_greffe' => $request->fonction_greffe,
+                            'type_greffe' => $request->type_greffe
                         ]);
 
                         $update_debut = PeriodeAntidate::where('id',$periode->id)
@@ -451,7 +459,11 @@ class JugementSuppletifController extends Controller
                 'sexe_requerant' => $request->sexe_requerant,
                 'lieu_transcrit' => $request->lieu_transcrit,
                 'etat_civil' => $request-> etat_civil,
-                'type' => $request->type
+                'type' => $request->type,
+                'fonction_president' => $request->fonction_president,
+                'type_president' => $request->type_president,
+                'fonction_greffe' => $request->fonction_greffe,
+                'type_greffe' => $request->type_greffe
 
            ]);
         }
@@ -505,7 +517,11 @@ class JugementSuppletifController extends Controller
                 'sexe_requerant' => $request->sexe_requerant,
                 'lieu_transcrit' => $request->lieu_transcrit,
                 'etat_civil' => $request-> etat_civil,
-                'type' => $request->type
+                'type' => $request->type,
+                'fonction_president' => $request->fonction_president,
+                'type_president' => $request->type_president,
+                'fonction_greffe' => $request->fonction_greffe,
+                'type_greffe' => $request->type_greffe
 
            ]);
         }
@@ -547,8 +563,8 @@ class JugementSuppletifController extends Controller
         $user = Auth::user();
         $num_mois = $request->mois;
         $annee = Annee::where('status',1)->first()->annee;
-        
- 
+
+
         if($user->hasRole('Administrateur'))
         {
             $annee = Annee::where('status',1)->first()->annee;

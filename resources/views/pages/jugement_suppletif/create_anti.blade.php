@@ -514,6 +514,41 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
+                                    <label class="control-label col-md-3"> Fonction
+                                        <span class="required"> * </span>
+                                    </label>
+                                    <div class="col-md-5">
+                                        <div class="input-group">
+                                            <select class="form-control input-height" name="fonction_president" required>
+                                                <option value="">Selectionner...</option>
+                                                <option value="President">President</option>
+                                                <option value="Presidente">Presidente</option>
+                                                <option value="JUGE">JUGE</option>
+                                                <option value="President de section">Président de section</option>
+                                                <option value="Presidente de section">Présidente de section</option>
+                                                <option value="President de section civile">Président de section civile</option>
+                                                <option value="Presidente de section civile">Présidente de section civile</option>
+                                                <option value="President de section correctionnelle">Président de section correctionnelle</option>
+                                                <option value="Presidente de section correctionnelle">Présidente de section correctionnelle</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="control-label col-md-3"> Status
+                                        <span class="required"> * </span>
+                                    </label>
+                                    <div class="col-md-5">
+                                        <div class="input-group">
+                                            <select class="form-control input-height" name="type_president" required>
+                                                <option value="">Selectionner...</option>
+                                                <option value="Officiel">Officiel</option>
+                                                <option value="Interim">Interim</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
                                     <label class="control-label col-md-3">Greffier
                                         <span class="required"> * </span>
                                     </label>
@@ -524,6 +559,34 @@
                                                     @foreach ($all_signateurs as $signateur)
                                                       <option value="{{ $signateur->nom_signateur }}">{{ $signateur->nom_signateur }}</option>
                                                     @endforeach
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="control-label col-md-3"> Fonction
+                                        <span class="required"> * </span>
+                                    </label>
+                                    <div class="col-md-5">
+                                        <div class="input-group">
+                                            <select class="form-control input-height" name="fonction_greffe" required>
+                                                <option value="">Selectionner...</option>
+                                                <option value="Chef du Greffe">Chef du Greffe</option>
+                                                <option value="Greffier">Greffier</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="control-label col-md-3"> Status
+                                        <span class="required"> * </span>
+                                    </label>
+                                    <div class="col-md-5">
+                                        <div class="input-group">
+                                            <select class="form-control input-height" name="type_greffe" required>
+                                                <option value="">Selectionner...</option>
+                                                <option value="Officiel">Officiel</option>
+                                                <option value="Interim">Interim</option>
                                             </select>
                                         </div>
                                     </div>

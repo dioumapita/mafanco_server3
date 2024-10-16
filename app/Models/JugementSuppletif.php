@@ -23,7 +23,8 @@ class JugementSuppletif extends Model
         'date_naiss_deuxieme_temoin','lieu_naiss_deuxieme_temoin','profession_deuxieme_temoin',
         'domicile_deuxieme_temoin','date_audience','en_presence','president','greffier','telephone',
         'rendez_vous','num_requette','lieu_transcrit','sexe_requerant','etat_civil','users_id','status','expire_at',
-        'annee_id','type','sexe_premier_temoin','sexe_deuxieme_temoin'
+        'annee_id','type','sexe_premier_temoin','sexe_deuxieme_temoin','fonction_president','type_president','fonction_greffe',
+        'type_greffe'
     ];
 
     protected $dates = [
