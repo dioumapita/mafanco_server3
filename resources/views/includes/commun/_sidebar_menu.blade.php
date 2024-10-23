@@ -207,17 +207,17 @@
                                 </li> -->
                                 <li class="nav-item">
                                     <a href="{{ route('default_casier_user_jour') }}" class="nav-link nav-toggle"> <i class="material-icons">map</i>
-                                        <span class="title">Statistique Casier</span>
+                                        <span class="title">Statistiques Casier</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="{{ route('default_jugement_user_jour') }}" class="nav-link nav-toggle"> <i class="material-icons">assignment</i>
-                                        <span class="title">Statistique jugement</span>
+                                        <span class="title">Statistiques jugement</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="{{ route('default_certificat_nationalite_user_jour') }}" class="nav-link nav-toggle"> <i class="material-icons">assignment</i>
-                                        <span class="title">Statistique nationalité</span>
+                                        <span class="title">Statistiques nationalité</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
