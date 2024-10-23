@@ -367,7 +367,7 @@ class JugementSuppletifController extends Controller
         //
         $all_signateurs = GestionSignateur::all();
 
-        if(auth()->user()->hasPermissionTo('Modifier un jugement'))
+        if(auth()->user()->hasPermissionTo('Modifié un jugement'))
         {
             $jugement = JugementSuppletif::where('id',$id)->first();
 
@@ -543,7 +543,7 @@ class JugementSuppletifController extends Controller
     public function destroy($id)
     {
         //
-        if(auth()->user()->hasPermissionTo('Supprimer un jugement'))
+        if(auth()->user()->hasPermissionTo('Supprimé un jugement'))
         {
             JugementSuppletif::where('id',$id)->delete();
 

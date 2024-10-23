@@ -135,7 +135,8 @@ class CertificatNationaliteController extends Controller
                                                                 'users_id' => Auth::user()->id,
                                                                 'annee_id' => $annee_id,
                                                                 'fonction' => $request->fonction,
-                                                                'type' => $request->type
+                                                                'type' => $request->type,
+                                                                'profession' => $request->profession
                                                             ]);
 
             QrCode::format('png')->generate(
@@ -185,7 +186,7 @@ class CertificatNationaliteController extends Controller
     public function edit($id)
     {
         //
-        if(auth()->user()->hasPermissionTo('Modifier une nationalité'))
+        if(auth()->user()->hasPermissionTo('Modifié une nationalité'))
         {
             $all_signateurs = GestionSignateur::all();
 
@@ -242,7 +243,8 @@ class CertificatNationaliteController extends Controller
                     'article' => $request->article,
                     'signateur' => $request->signateur,
                     'fonction' => $request->fonction,
-                    'type' => $request->type
+                    'type' => $request->type,
+                    'profession' => $request->profession
 
         ]);
 
@@ -260,7 +262,7 @@ class CertificatNationaliteController extends Controller
     public function destroy($id)
     {
         //
-        if(auth()->user()->hasPermissionTo('Supprimer une nationalité'))
+        if(auth()->user()->hasPermissionTo('Supprimé une nationalité'))
         {
             CertificatNationalite::where('id',$id)->delete();
 

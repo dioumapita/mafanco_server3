@@ -27,7 +27,7 @@
             <div class="card-body no-padding height-9">
                 <ul class="list-group list-group-unbordered">
                     <li class="list-group-item">
-                        <b>N°: {{ $certificat->num }} </b>
+                        <b>N°:  </b>
                     </li>
                     <li class="list-group-item">
                         <b>Que:  {{ $certificat->prenom_nom }}</b>
@@ -314,7 +314,7 @@
                                                                     <br> <b class="text-center">&emsp; ---------------- </b> <br>
                                                                     &emsp; TRIBUNAL DE <br>
                                                                     PREMIERE INSTANCE <br>
-                                                                    &emsp; DE DIXINN <br>
+                                                                    &emsp; DE MAFANCO <br>
                                                                     <b class="text-center">&emsp; ---------------- </b> <br>
                                                                     @if($certificat->fonction == 'President')
                                                                         &emsp;CABINET DU <br>
@@ -392,7 +392,7 @@
 
                                                                     @endif
                                                                     <b class="text-center">&emsp; ---------------- </b> <br><br>
-                                                                    &emsp; N° {{ $certificat->num }} / 2024
+                                                                    &emsp; N° &emsp;&emsp;&emsp;&emsp; / 2024
                                                                 </h4>
 
                                                             </address>
@@ -410,33 +410,33 @@
                                                         <br>
                                                         <p id="p1">
                                                             @if($certificat->fonction == 'President')
-                                                                Le Président @if($certificat->type == 'Interim') par intérim @endif du Tribunal de Première Instance de Dixinn,Conakry;
+                                                                Le Président @if($certificat->type == 'Interim') par intérim @endif du Tribunal de Première Instance de Mafanco,Conakry;
                                                             @elseif($certificat->fonction == 'Presidente')
-                                                                La Présidente @if($certificat->type == 'Interim') par intérim @endif du Tribunal de Première Instance de Dixinn,Conakry;
+                                                                La Présidente @if($certificat->type == 'Interim') par intérim @endif du Tribunal de Première Instance de Mafanco,Conakry;
                                                             @elseif($certificat->fonction == 'JUGE' and $info_signateur->sexe == 'M')
                                                                 Le Juge Président @if($certificat->type == 'Interim') par intérim @endif de la Section Civile et Administrative au
-                                                                Tribunal de Première Instance de Dixinn,Conakry;
+                                                                Tribunal de Première Instance de Mafanco,Conakry;
                                                             @elseif($certificat->fonction == 'JUGE' and $info_signateur->sexe == 'F')
                                                                 La Juge Présidente @if($certificat->type == 'Interim') par intérim @endif de la Section Civile et Administrative au
-                                                                Tribunal de Première Instance de Dixinn,Conakry;
+                                                                Tribunal de Première Instance de Mafanco,Conakry;
                                                             @elseif($certificat->fonction == 'President de section' and $info_signateur->sexe == 'M')
                                                                 Le Président de Section @if($certificat->type == 'Interim') par intérim @endif au
-                                                                Tribunal de Première Instance de Dixinn,Conakry;
+                                                                Tribunal de Première Instance de Mafanco,Conakry;
                                                             @elseif($certificat->fonction == 'Presidente de section' and $info_signateur->sexe == 'F')
                                                                 La Présidente de Section @if($certificat->type == 'Interim') par intérim @endif au
-                                                                Tribunal de Première Instance de Dixinn,Conakry;
+                                                                Tribunal de Première Instance de Mafanco,Conakry;
                                                             @elseif($certificat->fonction == 'President de section civile' and $info_signateur->sexe == 'M')
                                                                 Le Président de Section civile @if($certificat->type == 'Interim') par intérim @endif au
-                                                                Tribunal de Première Instance de Dixinn,Conakry;
+                                                                Tribunal de Première Instance de Mafanco,Conakry;
                                                             @elseif($certificat->fonction == 'Presidente de section civile' and $info_signateur->sexe == 'F')
                                                                 La Présidente de Section civile @if($certificat->type == 'Interim') par intérim @endif au
-                                                                Tribunal de Première Instance de Dixinn,Conakry;
+                                                                Tribunal de Première Instance de Mafanco,Conakry;
                                                             @elseif($certificat->fonction == 'President de section correctionnelle' and $info_signateur->sexe == 'M')
                                                                 Le Président de Section correctionnelle @if($certificat->type == 'Interim') par intérim @endif au
-                                                                Tribunal de Première Instance de Dixinn,Conakry;
+                                                                Tribunal de Première Instance de Mafanco,Conakry;
                                                             @elseif($certificat->fonction == 'Presidente de section correctionnelle' and $info_signateur->sexe == 'F')
                                                                 La Présidente de Section correctionnelle @if($certificat->type == 'Interim') par intérim @endif au
-                                                                Tribunal de Première Instance de Dixinn,Conakry;
+                                                                Tribunal de Première Instance de Mafanco,Conakry;
                                                             @else
 
                                                             @endif

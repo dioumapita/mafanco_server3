@@ -123,7 +123,8 @@ class CasierJudiciareController extends Controller
                                                             'num_copie' => $request->num_copie,
                                                             'date_copie' => $request->date_copie,
                                                             'users_id' => Auth::user()->id,
-                                                            'annee_id' => $annee_id
+                                                            'annee_id' => $annee_id,
+                                                            'delivre_par' => $request->delivrer_par
                                                         ]);
 
                 QrCode::format('png')->generate(
@@ -162,7 +163,7 @@ class CasierJudiciareController extends Controller
         //
         $casier = CasierJudiciaire::where('id',$id)->first();
 
-        if(auth()->user()->hasPermissionTo('Modifier un casier'))
+        if(auth()->user()->hasPermissionTo('Modifié un casier'))
         {
             $user = Auth::user();
             if($user->hasRole('Administrateur'))
@@ -216,7 +217,8 @@ class CasierJudiciareController extends Controller
             'nationalite' => $request->nationalite,
             'copie' => $request->copie,
             'num_copie' => $request->num_copie,
-            'date_copie' => $request->date_copie
+            'date_copie' => $request->date_copie,
+            'delivre_par' => $request->delivrer_par
         ]);
 
         Flashy::success('Le casier judiciaire a été modifier avec succès');
@@ -234,7 +236,7 @@ class CasierJudiciareController extends Controller
     public function destroy($id)
     {
         //
-        if(auth()->user()->hasPermissionTo('Supprimer un casier'))
+        if(auth()->user()->hasPermissionTo('Supprimé un casier'))
         {
             CasierJudiciaire::where('id',$id)->delete();
 

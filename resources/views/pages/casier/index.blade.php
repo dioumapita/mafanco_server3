@@ -138,7 +138,7 @@
                         <tbody>
                             @foreach ($all_casiers as $casier)
                                 <tr>
-                                    <td class="text-center">{{ $casier->num_casier }}</td>
+                                    <td class="text-center"></td>
                                     <td class="text-center">{{ $casier->concerne }}</td>
                                     <td class="text-center">{{ $casier->date_naiss->format('d/m/Y') }}</td>
                                     <td class="text-center">{{ $casier->lieu }}</td>

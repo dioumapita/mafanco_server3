@@ -27,7 +27,7 @@
             <div class="card-body no-padding height-9">
                 <ul class="list-group list-group-unbordered">
                     <li class="list-group-item">
-                        <b>N°: {{ $casier->num_casier }} </b>
+                        <b>N°:  </b>
                     </li>
                     <li class="list-group-item">
                         <b>Concerne:  {{ $casier->concerne }}</b>
@@ -190,14 +190,14 @@
                                                                 <br> <b class="text-center">&emsp; ---------------- </b> <br>
                                                                 &emsp; TRIBUNAL DE <br>
                                                                 PREMIERE INSTANCE <br>
-                                                                &emsp; DE DIXINN <br>
+                                                                &emsp; DE MAFANCO <br>
                                                             </h4>
                                                         </address>
                                                     </div>
                                                     <p id="title_casier">
                                                             BULLETIN N° 3 <br>
                                                             (ARTICLE 1216 DU CODE DE PROCÉDURE PÉNALE) <br>
-                                                            EXTRAIT DU CASIER JUDICIAIRE N° {{ $casier->num_casier }}
+                                                            EXTRAIT DU CASIER JUDICIAIRE N° 
                                                     </p>
                                                     <div id="introduction">
                                                         Concernant la personne nommée: {{ $casier->concerne }} <br>

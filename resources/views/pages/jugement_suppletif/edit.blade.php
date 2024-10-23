@@ -35,7 +35,7 @@
                             <fieldset>
                                 <div class="col-lg-12 p-t-20">
                                     <!-- Start nom de l'élève -->
-                                    @role('Administrateur')
+                                    <!-- @role('Administrateur')
                                         <div class="form-group row">
                                             <label class="control-label col-md-3">Numéro
                                                 <span class="required"></span>
@@ -56,7 +56,7 @@
                                                 </div>
                                             @endif
                                         </div>
-                                    @endrole
+                                    @endrole -->
                                         <div class="form-group row">
                                             <label class="control-label col-md-3">Prénom et nom
                                                 <span class="required"> * </span>
@@ -182,7 +182,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="form-group row">
+                                    <!-- <div class="form-group row">
                                         <label class="control-label col-md-3">Numéro de la requette
                                             <span class="required"> * </span>
                                         </label>
@@ -192,7 +192,7 @@
                                                     class="form-control input-height" value="{{ $jugement->num_requette }}" required />
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
                                     <div class="form-group row">
                                         <label class="control-label col-md-3">Date de la requête
                                             <span class="required"> * </span>

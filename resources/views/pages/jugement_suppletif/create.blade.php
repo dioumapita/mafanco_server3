@@ -170,7 +170,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="form-group row">
+                                <!-- <div class="form-group row">
                                     <label class="control-label col-md-3">Numéro de la requette
                                         <span class="required"> * </span>
                                     </label>
@@ -180,7 +180,7 @@
                                                 class="form-control input-height" value="{{ old('num_requette') }}" required />
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="form-group row">
                                     <label class="control-label col-md-3">Date de la requête
                                         <span class="required"> * </span>

@@ -79,6 +79,11 @@
                             @endcan
                             @can('Statistique Jugement')
                                 <li class="nav-item">
+                                    <a href="{{ route('default_casier_user_jour') }}" class="nav-link nav-toggle"> <i class="material-icons">map</i>
+                                        <span class="title">Statistique Casier</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
                                     <a href="{{ route('default_jugement_user_jour') }}" class="nav-link nav-toggle"> <i class="material-icons">assignment</i>
                                         <span class="title">Statistique jugement</span>
                                     </a>
@@ -92,7 +97,7 @@
                                 </li>
                             @endcan
                             @role('Administrateur')
-                                <li class="nav-item">
+                                <!-- <li class="nav-item">
                                     <a href="#" class="nav-link nav-toggle"> <i class="material-icons">card_membership</i>
                                         <span class="title">Multi-Gest</span> <span class="arrow"></span>
                                     </a>
@@ -142,7 +147,7 @@
                                             </a>
                                         </li>
                                     </ul>
-                                </li>
+                                </li> -->
                                 <li class="nav-item">
                                     <a href="#" class="nav-link nav-toggle"> <i class="material-icons">work</i>
                                         <span class="title">Armoire</span> <span class="arrow"></span>
@@ -195,9 +200,14 @@
                                         <span class="title">Gestion des autorisations</span>
                                     </a>
                                 </li>
-                                <li class="nav-item">
+                                <!-- <li class="nav-item">
                                     <a href="{{ route('periode_antidate.index') }}" class="nav-link nav-toggle"> <i class="material-icons">assignment</i>
                                         <span class="title">Gestion des période</span>
+                                    </a>
+                                </li> -->
+                                <li class="nav-item">
+                                    <a href="{{ route('default_casier_user_jour') }}" class="nav-link nav-toggle"> <i class="material-icons">map</i>
+                                        <span class="title">Statistique Casier</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
@@ -220,7 +230,7 @@
                                         <span class="title">Gestion des signateurs</span>
                                     </a>
                                 </li>
-                                <li class="nav-item">
+                                <!-- <li class="nav-item">
                                     <a href="{{ route('periode_normal.index') }}" class="nav-link nav-toggle"> <i class="material-icons">assignment</i>
                                         <span class="title">Periodes normales</span>
                                     </a>
@@ -229,22 +239,22 @@
                                     <a href="{{ route('import_sql') }}" class="nav-link nav-toggle"> <i class="material-icons">assignment</i>
                                         <span class="title">Import/export</span>
                                     </a>
-                                </li>
-                                <li class="nav-item">
+                                </li> -->
+                                <!-- <li class="nav-item">
                                     <a href="{{ route('check_num_jugement') }}" class="nav-link nav-toggle"> <i class="material-icons">assignment</i>
                                         <span class="title">Numéro non utiliser</span>
                                     </a>
-                                </li>
-                                <li class="nav-item">
+                                </li> -->
+                                <!-- <li class="nav-item">
                                     <a href="{{ route('duplique_num_jugement') }}" class="nav-link nav-toggle"> <i class="material-icons">assignment</i>
                                         <span class="title">Doublons numéro</span>
                                     </a>
-                                </li>
-                                <li class="nav-item">
+                                </li> -->
+                                <!-- <li class="nav-item">
                                     <a href="{{ route('duplique_num_jugement_anti') }}" class="nav-link nav-toggle"> <i class="material-icons">assignment</i>
                                         <span class="title">Doublons numéro anti</span>
                                     </a>
-                                </li>
+                                </li> -->
                             @endrole
                             <li class="nav-item">
                                 <a href="{{ route('form_change_password') }}" class="nav-link nav-toggle"> <i class="material-icons">lock</i>

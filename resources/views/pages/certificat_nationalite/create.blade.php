@@ -189,6 +189,17 @@
                             <fieldset>
                                 <div class="col-lg-12 p-t-20">
                                     <div class="form-group row">
+                                        <label class="control-label col-md-3">Profession
+                                            <span class="required"> * </span>
+                                        </label>
+                                        <div class="col-md-5">
+                                            <div class="input-group">
+                                                <input type="text" name="profession"  placeholder="Veuillez saisir la profession"
+                                                    class="form-control input-height" value="{{ old('profession') }}" required />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
                                         <label class="control-label col-md-3"> Article
                                             <span class="required"> * </span>
                                         </label>

@@ -148,14 +148,10 @@
                             @foreach ($all_jugement_suppletifs as $jugement)
                                 <tr>
                                     <td class="text-center">
-                                        @if($jugement->status == 0)
-                                            {{ $jugement->num }}
-                                        @else
-                                            {{ $jugement->num_anti }}
-                                        @endif
+                                        
                                     </td>
                                     <td>
-                                        {{ $jugement->num_requette }}
+                                        
                                     </td>
                                     <td class="text-center">{{ $jugement->concerne }}</td>
                                     <td class="text-center">{{ $jugement->date_naiss->format('d/m/Y') }}</td>

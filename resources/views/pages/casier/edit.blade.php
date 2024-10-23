@@ -189,6 +189,19 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="col-lg-12 p-t-20">
+                                    <div class="form-group row">
+                                        <label class="control-label col-md-3">Délivrer par
+                                            <span class="required"> * </span>
+                                        </label>
+                                        <div class="col-md-5">
+                                            <div class="input-group">
+                                                <input type="text" name="delivrer_par"  placeholder="Veuillez saisir le lieu de delivration"
+                                                    class="form-control input-height" value="{{ $casier->delivre_par }}" required />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </fieldset>
                         </form>
                     </div>

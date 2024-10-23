@@ -13,7 +13,7 @@ class CasierJudiciaire extends Model
 
     protected $dates = ['date_naiss','date_copie'];
 
-    protected $fillable = ['num_casier','concerne','pere','mere','date_naiss','lieu','domicile','etat_civil','profession','nationalite','copie','num_copie','date_copie','users_id','annee_id'];
+    protected $fillable = ['num_casier','concerne','pere','mere','date_naiss','lieu','domicile','etat_civil','profession','nationalite','copie','num_copie','date_copie','users_id','annee_id','delivre_par'];
 
     public function user()
     {

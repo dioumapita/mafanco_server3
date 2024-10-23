@@ -136,7 +136,7 @@
                         <tbody>
                             @foreach ($all_certificats as $certificat)
                                 <tr>
-                                    <td class="text-center">{{ $certificat->num }}</td>
+                                    <td class="text-center"></td>
                                     <td class="text-center">{{ $certificat->prenom_nom }}</td>
                                     <td class="text-center">{{ $certificat->date_naiss->format('d/m/Y') }}</td>
                                     <td class="text-center">{{ $certificat->lieu }}</td>

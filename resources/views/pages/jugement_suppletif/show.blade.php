@@ -27,7 +27,7 @@
             <div class="card-body no-padding height-9">
                 <ul class="list-group list-group-unbordered">
                     <li class="list-group-item">
-                        <b>N°: {{ $jugement->num }} </b>
+                        <b>N°:  </b>
                     </li>
                     <li class="list-group-item">
                         <b>Que:  {{ $jugement->concerne }}</b>
@@ -153,14 +153,10 @@
                                                             <address>
                                                                 <h4 class="font-bold addr-font-h4">
                                                                     Cour d'appel de Conakry <br>
-                                                                    Tribunal de Première Instance de Dixinn
+                                                                    Tribunal de Première Instance de Mafanco
                                                                     <br><br>
                                                                     Jugement N°
-                                                                    @if($jugement->status == 0)
-                                                                      {{ $jugement->num }}
-                                                                    @else
-                                                                      {{ $jugement->num_anti }}
-                                                                    @endif
+                                                                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
                                                                      du {{ $jugement->date_audience->isoFormat('DD').'/'.$jugement->date_audience->isoFormat('MM').'/'.$jugement->date_audience->format('Y') }}
                                                                 </h4>
                                                             </address>
@@ -207,7 +203,7 @@
                                                                 née
                                                             @endif
                                                             le {{ $jugement->date_naiss->isoFormat('DD MMMM Y') }} à {{ $jugement->lieu_naiss }}. <br>
-                                                            Le Tribunal de Première Instance de Dixinn, statuant en chambre de conseil, en matière civile, sur
+                                                            Le Tribunal de Première Instance de Mafanco, statuant en chambre de conseil, en matière civile, sur
                                                             requête et en premier ressort, en son audience du
                                                             @if($jugement->date_audience->isoFormat('DD') == '01')
                                                                 premier
@@ -216,25 +212,25 @@
                                                             @endif
                                                               {{ $jugement->date_audience->isoFormat('MMMM') }} {{ $convertisseur->format($jugement->date_audience->format('Y')) }}, à laquelle siégeait
                                                             @if($jugement->fonction_president == 'President')
-                                                                <b>{{ $jugement->president }} Président @if($jugement->type_president == 'Interim') par intérim @endif du Tribunal de Première Instance de Dixinn,Conakry, </b>
+                                                                <b>{{ $jugement->president }} Président @if($jugement->type_president == 'Interim') par intérim @endif du Tribunal de Première Instance de Mafanco,Conakry, </b>
                                                             @elseif($jugement->fonction_president == 'Presidente')
-                                                                <b>{{ $jugement->president }} Présidente @if($jugement->type_president == 'Interim') par intérim @endif du Tribunal de Première Instance de Dixinn,Conakry, </b>
+                                                                <b>{{ $jugement->president }} Présidente @if($jugement->type_president == 'Interim') par intérim @endif du Tribunal de Première Instance de Mafanco,Conakry, </b>
                                                             @elseif($jugement->fonction_president == 'JUGE' and $info_president->sexe == 'M')
-                                                                <b>{{ $jugement->president }} Juge Président  @if($jugement->type_president == 'Interim') par intérim @endif de la Section Civile et Administrative au Tribunal de Première Instance de Dixinn,Conakry, </b>
+                                                                <b>{{ $jugement->president }} Juge Président  @if($jugement->type_president == 'Interim') par intérim @endif de la Section Civile et Administrative au Tribunal de Première Instance de Mafanco,Conakry, </b>
                                                             @elseif($jugement->fonction_president == 'JUGE' and $info_president->sexe == 'F')
-                                                                <b>{{ $jugement->president }} Juge Présidente  @if($jugement->type_president == 'Interim') par intérim @endif de la Section Civile et Administrative au Tribunal de Première Instance de Dixinn,Conakry, </b>
+                                                                <b>{{ $jugement->president }} Juge Présidente  @if($jugement->type_president == 'Interim') par intérim @endif de la Section Civile et Administrative au Tribunal de Première Instance de Mafanco,Conakry, </b>
                                                             @elseif($jugement->fonction_president == 'President de section' and $info_president->sexe == 'M')
-                                                                <b>{{ $jugement->president }}  Président de Section @if($jugement->type_president == 'Interim') par intérim @endif au Tribunal de Première Instance de Dixinn,Conakry, </b>
+                                                                <b>{{ $jugement->president }}  Président de Section @if($jugement->type_president == 'Interim') par intérim @endif au Tribunal de Première Instance de Mafanco,Conakry, </b>
                                                             @elseif($jugement->fonction_president == 'President de section' and $info_president->sexe == 'F')
-                                                                <b>{{ $jugement->president }}  Présidente de Section @if($jugement->type_president == 'Interim') par intérim @endif au Tribunal de Première Instance de Dixinn,Conakry, </b>
+                                                                <b>{{ $jugement->president }}  Présidente de Section @if($jugement->type_president == 'Interim') par intérim @endif au Tribunal de Première Instance de Mafanco,Conakry, </b>
                                                             @elseif($jugement->fonction_president == 'President de section civile' and $info_president->sexe == 'M')
-                                                                <b>{{ $jugement->president }}  President de section civile @if($jugement->type_president == 'Interim') par intérim @endif au Tribunal de Première Instance de Dixinn,Conakry, </b>
+                                                                <b>{{ $jugement->president }}  President de section civile @if($jugement->type_president == 'Interim') par intérim @endif au Tribunal de Première Instance de Mafanco,Conakry, </b>
                                                             @elseif($jugement->fonction_president == 'Presidente de section civile' and $info_president->sexe == 'F')
-                                                                <b>{{ $jugement->president }} Presidente de section civile @if($jugement->type_president == 'Interim') par intérim @endif au Tribunal de Première Instance de Dixinn,Conakry, </b>
+                                                                <b>{{ $jugement->president }} Presidente de section civile @if($jugement->type_president == 'Interim') par intérim @endif au Tribunal de Première Instance de Mafanco,Conakry, </b>
                                                             @elseif($jugement->fonction_president == 'President de section correctionnelle' and $info_president->sexe == 'M')
-                                                                <b>{{ $jugement->president }} President de section correctionnelle @if($jugement->type_president == 'Interim') par intérim @endif au Tribunal de Première Instance de Dixinn,Conakry, </b>
+                                                                <b>{{ $jugement->president }} President de section correctionnelle @if($jugement->type_president == 'Interim') par intérim @endif au Tribunal de Première Instance de Mafanco,Conakry, </b>
                                                             @elseif($jugement->fonction_president == 'Presidente de section correctionnelle' and $info_president->sexe == 'F')
-                                                                <b>{{ $jugement->president }} Presidente de section correctionnelle @if($jugement->type_president == 'Interim') par intérim @endif au Tribunal de Première Instance de Dixinn,Conakry, </b>
+                                                                <b>{{ $jugement->president }} Presidente de section correctionnelle @if($jugement->type_president == 'Interim') par intérim @endif au Tribunal de Première Instance de Mafanco,Conakry, </b>
                                                             @else
 
                                                             @endif
@@ -255,7 +251,7 @@
                                                             <p id="tribunal">Tribunal</p>
                                                             <p id="style_js_1">
                                                                 Vu les pièces du dossier; <br>
-                                                                Vu la requête en date du {{ $jugement->date_requete->isoFormat('DD MMMM Y') }} enregistrée sous le numéro {{ $jugement->num_requette }} présentée par {{ $jugement->requerant }}
+                                                                Vu la requête en date du {{ $jugement->date_requete->isoFormat('DD MMMM Y') }}  présentée par {{ $jugement->requerant }}
                                                                 @if($jugement->profession_requerant != null)
                                                                     , {{ $jugement->profession_requerant }}
                                                                 @endif
