@@ -139,21 +139,22 @@ class CertificatNationaliteController extends Controller
                                                                 'profession' => $request->profession
                                                             ]);
 
-            QrCode::format('png')->generate(
-                $num."\n".$request->prenom_nom."\n".Carbon::parse($request->date_naiss)->format('d/m/Y')."\n".$request->lieu."\n".$request->pere."\n".$request->mere,
-                '../public/qrcodes/'.$new_certificat->id.'.png');
-
             $num_copie = $request->num_copie;
             $date_copie = $request->date_copie;
             foreach($request->copie as $key => $copie)
             {
                 $new_document = DocCertificat::create([
-                                                         'copie' => $copie,
-                                                         'num_copie' => $num_copie[$key],
-                                                         'date_copie' => $date_copie[$key],
-                                                         'certificat_nationalites_id' => $new_certificat->id
-                                                     ]);
+                                                            'copie' => $copie,
+                                                            'num_copie' => $num_copie[$key],
+                                                            'date_copie' => $date_copie[$key],
+                                                            'certificat_nationalites_id' => $new_certificat->id
+                                                        ]);
             }
+
+            QrCode::format('png')->generate(
+                $num."\n".$request->prenom_nom."\n".Carbon::parse($request->date_naiss)->format('d/m/Y')."\n".$request->lieu."\n".$request->pere."\n".$request->mere,
+                '../public/qrcodes/'.$new_certificat->id.'.png');
+
             //message flash
             Flashy::success('Le certificat de nationalité est crée avec succès');
 
@@ -296,7 +297,8 @@ class CertificatNationaliteController extends Controller
         elseif($user->hasRole('Administrateur'))
         {
             $annee = Annee::where('status',1)->first()->annee;
-            $all_certificats =     CertificatNationalite::whereMonth('created_at',$num_mois)
+            $all_certificats =     CertificatNationalite::
+                                                        whereMonth('created_at',10)
                                                         ->whereYear('created_at',$annee)
                                                         ->get();
         }
